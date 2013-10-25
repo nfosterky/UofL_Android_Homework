@@ -76,6 +76,7 @@ public class QuizActivity extends Activity {
 			public void onClick(View v) {
 				Intent i = new Intent(QuizActivity.this, CheatActivity.class);
 				startActivity(i);
+				// adddd commments
 			}
 		});
     }
