@@ -12,4 +12,8 @@
    	<string name="question_mideast">The Suez Canal connects the Red Sea and the Indian Ocean.</string>
    	<string name="question_africa">The source of the Nile River is in Egypt.</string>
    	<string name="question_asia">Lake Baikal is the world\'s oldest and deepest freshwater lake.</string>
+   	<string name="btn_cheat">Cheat!</string>
+   	<string name="warning_text">Are you sure you want to do this?</string>
+   	<string name="btn_show_answer">Show Answer</string>
+   	<string name="judgement_toast">Cheating is wrong.</string>
 </resources>
