@@ -15,6 +15,7 @@ public class QuizActivity extends Activity {
 	private Button btnTrue;
 	private Button btnFalse;
 	private Button btnNext;
+	private Button btnCheat;
 	private TextView mQuestionTextView;
 	
 	private TrueFalse[] mQuestionBank = new TrueFalse[]{
@@ -64,6 +65,15 @@ public class QuizActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				checkAnswer(false);
+			}
+		});
+        
+        btnCheat = (Button)findViewById(R.id.btnCheat);
+        btnCheat.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// start cheat activity
 			}
 		});
     }
