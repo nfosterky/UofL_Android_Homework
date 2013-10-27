@@ -16,11 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-         <Button
-            android:id="@+id/btnCheat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnCheat" tools:ignore="ButtonStyle"/>
+         
          
         <Button
             android:id="@+id/btnTrue"
@@ -36,7 +32,11 @@
             tools:ignore="ButtonStyle" />
 
     </LinearLayout>
-
+	<Button
+            android:id="@+id/btnCheat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCheat" tools:ignore="ButtonStyle"/>
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
