@@ -62,4 +62,10 @@ public class CrimeListFragment extends ListFragment {
 			return convertView;
 		}
 	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		((CrimeAdapter)getListAdapter()).notifyDataSetChanged();
+	}
 }
