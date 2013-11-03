@@ -27,6 +27,7 @@ public class Layout1 extends Fragment {
 				new SongAdapter(getActivity(), R.layout.listview_for_each_song, songs);
 		ListView listViewMusic = (ListView) view.findViewById(R.id.listViewSongs);
 		listViewMusic.setAdapter(adapter);
+
 		
 		return view;
 	}
