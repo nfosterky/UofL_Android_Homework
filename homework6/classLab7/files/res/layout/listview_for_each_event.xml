@@ -14,17 +14,6 @@
         android:paddingLeft="5dp"
         android:paddingTop="25dp"/>
     
-    
-    <TextView
-        android:id="@+id/textViewEventArtistName"
-        android:textSize="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" 
-        android:textStyle="italic"
-        android:paddingLeft="12dp"
-        />
-    
     <TextView
         android:id="@+id/textViewEventDate"
         android:textSize="12dp"

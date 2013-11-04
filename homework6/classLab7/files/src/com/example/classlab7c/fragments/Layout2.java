@@ -33,18 +33,6 @@ public class Layout2 extends Fragment {
 		ListView listViewArtists = (ListView) view.findViewById(R.id.listViewArtists);
 		listViewArtists.setAdapter(artistAdapter);
 		
-//		List<Event>events = MusicListService.getInstance(getActivity()).getAllEvents();
-//		EventAdapter eventAdapter =
-//				new EventAdapter(getActivity(), R.layout.listview_for_each_event, events);
-//		ListView listViewEvents = (ListView) view.findViewById(R.id.listViewEvents);
-//		listViewEvents.setAdapter(eventAdapter);
-//		
-//		List<Song>songs = MusicListService.getInstance(getActivity()).getAllSongs();
-//		SongAdapter songAdapter =
-//				new SongAdapter(getActivity(), R.layout.listview_for_each_song, songs);
-//		ListView listViewMusic = (ListView) view.findViewById(R.id.listViewArtistSongs);
-//		listViewMusic.setAdapter(songAdapter);
-		
 		return view;
 	}
 

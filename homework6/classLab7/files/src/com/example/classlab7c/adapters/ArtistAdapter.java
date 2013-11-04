@@ -8,13 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.classlab7c.R;
 import com.example.classlab7c.model.Artist;
-import com.example.classlab7c.model.Event;
-import com.example.classlab7c.service.MusicListService;
 
 public class ArtistAdapter extends ArrayAdapter<Artist> {
 	private SimpleDateFormat df = new SimpleDateFormat("yyyy/mm/dd"); 
@@ -39,18 +38,17 @@ public class ArtistAdapter extends ArrayAdapter<Artist> {
 		
 		TextView textViewTitle = (TextView)view.findViewById(R.id.textViewArtistName);
 		textViewTitle.setText(artist.getArtistName());
+	
+		EventAdapter eventAdapter =
+				new EventAdapter(mContext, R.layout.listview_for_each_event, artist.getTours());
+		ListView listViewEvents = (ListView) view.findViewById(R.id.listViewArtistEvents);
+		listViewEvents.setAdapter(eventAdapter);
 		
-//		List<Event>events = MusicListService.getInstance(mContext).getAllEvents();
-//		EventAdapter eventAdapter =
-//				new EventAdapter(mContext, R.layout.listview_for_each_event, events);
-//		ListView listViewEvents = (ListView) view.findViewById(R.id.listViewEvents);
-//		listViewEvents.setAdapter(eventAdapter);
 		
-//		List<Song>songs = MusicListService.getInstance(getActivity()).getAllSongs();
-//		SongAdapter songAdapter =
-//				new SongAdapter(getActivity(), R.layout.listview_for_each_song, songs);
-//		ListView listViewMusic = (ListView) view.findViewById(R.id.listViewArtistSongs);
-//		listViewMusic.setAdapter(songAdapter);
+		SongAdapter songAdapter =
+				new SongAdapter(mContext, R.layout.listview_for_each_song, artist.getSongs());
+		ListView listViewMusic = (ListView) view.findViewById(R.id.listViewArtistSongs);
+		listViewMusic.setAdapter(songAdapter);
 		
 		return view;
 	}
