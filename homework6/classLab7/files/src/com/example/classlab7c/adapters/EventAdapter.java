@@ -12,9 +12,10 @@ import android.widget.TextView;
 
 import com.example.classlab7c.R;
 import com.example.classlab7c.model.Event;
+import com.example.classlab7c.service.MusicListService;
 
-public class EventAdapter extends ArrayAdapter<Event> {
-	private SimpleDateFormat df = new SimpleDateFormat("yyyy/mm/dd"); 
+public class EventAdapter extends ArrayAdapter<Event> { 
+	private SimpleDateFormat df = new SimpleDateFormat("MM dd, yyyy"); 
 	private Context mContext;
 	private List<Event> mEntries;
 	
@@ -36,8 +37,16 @@ public class EventAdapter extends ArrayAdapter<Event> {
 		TextView textViewName = (TextView)view.findViewById(R.id.textViewEventName);
 		textViewName.setText(event.getEventName());
 		
+		TextView textViewArtistName = (TextView)view.findViewById(R.id.textViewArtistName);
+		textViewArtistName.setText(
+							MusicListService
+								.getInstance(mContext)
+								.getArtistById(event.getArtistId())
+								.getArtistName()
+						);
+	
 		TextView textViewDate = (TextView)view.findViewById(R.id.textViewEventDate);
-		textViewDate.setText(event.getDate().toString());
+		textViewDate.setText(df.format(event.getDate()));
 		
 		TextView textViewLocation = (TextView)view.findViewById(R.id.textViewEventLocation);
 		textViewLocation.setText(event.getLocation());

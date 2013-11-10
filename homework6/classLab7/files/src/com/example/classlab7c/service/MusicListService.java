@@ -94,4 +94,11 @@ public class MusicListService {
 	public List<Event> getAllEvents(){
 		return events;
 	}
+
+	public Artist getArtistById(int artistId) {
+		for (Artist artist:artists) {
+			if (artistId == artist.getArtistId()) return artist;
+		}
+		return new Artist(0, "No Artist Found", new ArrayList<Song>(), new ArrayList<Event>());
+	}
 }

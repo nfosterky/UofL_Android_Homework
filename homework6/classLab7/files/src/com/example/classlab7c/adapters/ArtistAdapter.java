@@ -1,14 +1,11 @@
 package com.example.classlab7c.adapters;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,7 +13,7 @@ import com.example.classlab7c.R;
 import com.example.classlab7c.model.Artist;
 
 public class ArtistAdapter extends ArrayAdapter<Artist> {
-	private SimpleDateFormat df = new SimpleDateFormat("yyyy/mm/dd"); 
+	
 	private Context mContext;
 	private List<Artist> mEntries;
 	
