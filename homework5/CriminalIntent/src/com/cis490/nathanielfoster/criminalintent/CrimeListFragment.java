@@ -1,7 +1,6 @@
 package com.cis490.nathanielfoster.criminalintent;
 
 import java.util.ArrayList;
-
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
