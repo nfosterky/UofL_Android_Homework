@@ -154,6 +154,7 @@ public class MainActivity extends Activity {
 		imgViews.add(Transform.createSepiaToningEffect(thumb, 4, 20.8, .2, .3));
 		imgViews.add(Transform.decreaseColorDepth(thumb, 20));
 		imgViews.add(Transform.doGreyscale(thumb));
+		imgViews.add(Transform.createSepiaToningEffect(thumb, 4, 10.8, .2, 35.3));
 		
 		ImgBtnAdapter adapter = new ImgBtnAdapter(this.getApplicationContext(), R.layout.btn_for_grid, imgViews);
 		GridView imageGrid = (GridView)findViewById(R.id.img_grid);

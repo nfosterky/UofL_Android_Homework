@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -49,10 +50,16 @@ public class ImageActivity extends Activity {
 					File file = new File(dir, filename+".jpg");
 					if(!file.exists()) file.createNewFile();
 					fOut = new FileOutputStream(file);
-					
-					
 					bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fOut);
-					MediaStore.Images.Media.insertImage(getContentResolver(),file.getAbsolutePath(),file.getName(),file.getName());
+					String saved = MediaStore.Images.Media.insertImage(getContentResolver(),file.getAbsolutePath(),file.getName(),file.getName());
+					if (saved != null) {
+						// file was successfuly saved 
+						Log.d("File saved", "successful");
+						finish();
+					} else {
+						Log.d("File saved", "unsuccessful");
+					}
+					
 					fOut.flush();
 					fOut.close();
 
